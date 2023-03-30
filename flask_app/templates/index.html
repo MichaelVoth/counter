@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <nav>
+        <h1 style="text-align: center; font-size: 3.5rem;">Counter</h1>
+    </nav>
+    <div style="justify-content: center;">
+        <p style="text-align: center; font-size: 2rem;">Visited {{session['count']}} times!</p>
+    </div>
+    <div style="text-align: center">
+        <button onclick="location.href = '/add'"> +2 </button>
+        <button onclick="location.href = '/destroy_session'">Reset</button>
+    </div>
+    <div style="text-align: center; margin: 20px;">
+        <form action="/custom" method="POST">
+            <label>Add a Custom amount!</label>
+            <input type="number" name="custom_amount" value="0">
+            <input type="submit" value="Enter">
+        </form>
+    </div>
+
+</body>
+</html>
